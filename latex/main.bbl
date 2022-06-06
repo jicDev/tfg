@@ -1,0 +1,279 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{covid-19-definición}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8179b1fdebe9235e54501d2878c47e1b}{%
+           family={Organization},
+           familyi={O\bibinitperiod},
+           given={World\bibnamedelima Health},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{fullhash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{bibnamehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{authorbibnamehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{authornamehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{authorfullhash}{8179b1fdebe9235e54501d2878c47e1b}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Coronavirus disease (COVID-19) - Technical guidance}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.who.int/emergencies/diseases/novel-coronavirus-2019/technical-guidance/naming-the-coronavirus-disease-(covid-2019)-and-the-virus-that-causes-it
+      \endverb
+      \verb{url}
+      \verb https://www.who.int/emergencies/diseases/novel-coronavirus-2019/technical-guidance/naming-the-coronavirus-disease-(covid-2019)-and-the-virus-that-causes-it
+      \endverb
+    \endentry
+    \entry{covid-19-overview}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8179b1fdebe9235e54501d2878c47e1b}{%
+           family={Organization},
+           familyi={O\bibinitperiod},
+           given={World\bibnamedelima Health},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{fullhash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{bibnamehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{authorbibnamehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{authornamehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{authorfullhash}{8179b1fdebe9235e54501d2878c47e1b}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Coronavirus disease (COVID-19) - Overview, prevention and symptoms}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.who.int/health-topics/coronavirus
+      \endverb
+      \verb{url}
+      \verb https://www.who.int/health-topics/coronavirus
+      \endverb
+    \endentry
+    \entry{h1n1-overview}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8179b1fdebe9235e54501d2878c47e1b}{%
+           family={Organization},
+           familyi={O\bibinitperiod},
+           given={World\bibnamedelima Health},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{fullhash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{bibnamehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{authorbibnamehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{authornamehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{authorfullhash}{8179b1fdebe9235e54501d2878c47e1b}
+      \field{extraname}{3}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Influenza A (H1N1) - Overview}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.who.int/emergencies/situations/influenza-a-(h1n1)-outbreak
+      \endverb
+      \verb{url}
+      \verb https://www.who.int/emergencies/situations/influenza-a-(h1n1)-outbreak
+      \endverb
+    \endentry
+    \entry{hopkins-map}{online}{}
+      \name{author}{2}{}{%
+        {{hash=1b3ce9101c554d65ef135a0b6e1e525d}{%
+           family={University},
+           familyi={U\bibinitperiod},
+           given={Johns\bibnamedelima Hopkins},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=4ff278b4704d3e44b01ff80f37386777}{%
+           family={Medicine},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{568b81d2a6f03ae7653149d176ce5c1e}
+      \strng{fullhash}{568b81d2a6f03ae7653149d176ce5c1e}
+      \strng{bibnamehash}{568b81d2a6f03ae7653149d176ce5c1e}
+      \strng{authorbibnamehash}{568b81d2a6f03ae7653149d176ce5c1e}
+      \strng{authornamehash}{568b81d2a6f03ae7653149d176ce5c1e}
+      \strng{authorfullhash}{568b81d2a6f03ae7653149d176ce5c1e}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{COVID-19 Dashboard}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://coronavirus.jhu.edu/map.html
+      \endverb
+      \verb{url}
+      \verb https://coronavirus.jhu.edu/map.html
+      \endverb
+    \endentry
+    \entry{inteligencia-artificial-en-salud}{online}{}
+      \name{author}{1}{}{%
+        {{hash=2fa71a9f6b8e799addf767eb4978cdcd}{%
+           family={Ministerio\bibnamedelimb de\bibnamedelima Educación},
+           familyi={M\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim E\bibinitperiod},
+           given={Ciencia\bibnamedelimb y\bibnamedelimb Tecnología\bibnamedelimb de\bibnamedelimb la\bibnamedelimb Nación\bibnamedelima Argentina},
+           giveni={C\bibinitperiod\bibinitdelim y\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim l\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim A\bibinitperiod},
+           suffix={Cultura},
+           suffixi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{2fa71a9f6b8e799addf767eb4978cdcd}
+      \strng{fullhash}{2fa71a9f6b8e799addf767eb4978cdcd}
+      \strng{bibnamehash}{2fa71a9f6b8e799addf767eb4978cdcd}
+      \strng{authorbibnamehash}{2fa71a9f6b8e799addf767eb4978cdcd}
+      \strng{authornamehash}{2fa71a9f6b8e799addf767eb4978cdcd}
+      \strng{authorfullhash}{2fa71a9f6b8e799addf767eb4978cdcd}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Informe de tendencia en ciencia y tecnología}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.argentina.gob.ar/sites/default/files/informe_vigilancia_e_inteligencia_estrategica_vf.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.argentina.gob.ar/sites/default/files/informe_vigilancia_e_inteligencia_estrategica_vf.pdf
+      \endverb
+    \endentry
+    \entry{habeas-data}{online}{}
+      \name{author}{1}{}{%
+        {{hash=2f9e64ca240668872f3e8438db62b9cb}{%
+           family={Justicia\bibnamedelimb y\bibnamedelimb Derechos\bibnamedelimb Humanos\bibnamedelimb de\bibnamedelimb la\bibnamedelimb Nación\bibnamedelima Argentina},
+           familyi={J\bibinitperiod\bibinitdelim y\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim l\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Ministerio},
+           giveni={M\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{2f9e64ca240668872f3e8438db62b9cb}
+      \strng{fullhash}{2f9e64ca240668872f3e8438db62b9cb}
+      \strng{bibnamehash}{2f9e64ca240668872f3e8438db62b9cb}
+      \strng{authorbibnamehash}{2f9e64ca240668872f3e8438db62b9cb}
+      \strng{authornamehash}{2f9e64ca240668872f3e8438db62b9cb}
+      \strng{authorfullhash}{2f9e64ca240668872f3e8438db62b9cb}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Datos personales}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.argentina.gob.ar/justicia/derechofacil/leysimple/datos-personales
+      \endverb
+      \verb{url}
+      \verb https://www.argentina.gob.ar/justicia/derechofacil/leysimple/datos-personales
+      \endverb
+    \endentry
+    \entry{tp}{article}{}
+      \name{author}{1}{}{%
+        {{hash=36770aacf18298c71085a9ff58db16f6}{%
+           family={Corbat},
+           familyi={C\bibinitperiod},
+           given={Juan\bibnamedelima Ignacio},
+           giveni={J\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{36770aacf18298c71085a9ff58db16f6}
+      \strng{fullhash}{36770aacf18298c71085a9ff58db16f6}
+      \strng{bibnamehash}{36770aacf18298c71085a9ff58db16f6}
+      \strng{authorbibnamehash}{36770aacf18298c71085a9ff58db16f6}
+      \strng{authornamehash}{36770aacf18298c71085a9ff58db16f6}
+      \strng{authorfullhash}{36770aacf18298c71085a9ff58db16f6}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Inteligencia Artificial}
+      \field{title}{Trabajo práctico inteligencia artificial}
+      \field{year}{2021}
+    \endentry
+    \entry{espectrograma}{online}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{title}{Espectrograma}
+      \verb{urlraw}
+      \verb https://www.wikiwand.com/es/Espectrograma
+      \endverb
+      \verb{url}
+      \verb https://www.wikiwand.com/es/Espectrograma
+      \endverb
+    \endentry
+    \entry{fourier}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{Fourier Transform}
+      \verb{urlraw}
+      \verb https://www.wikiwand.com/en/Fourier_transform
+      \endverb
+      \verb{url}
+      \verb https://www.wikiwand.com/en/Fourier_transform
+      \endverb
+    \endentry
+    \entry{librosa}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{Librosa Python Package}
+      \verb{urlraw}
+      \verb https://librosa.org/
+      \endverb
+      \verb{url}
+      \verb https://librosa.org/
+      \endverb
+    \endentry
+    \entry{react}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{React Native}
+      \verb{urlraw}
+      \verb https://reactnative.dev/
+      \endverb
+      \verb{url}
+      \verb https://reactnative.dev/
+      \endverb
+    \endentry
+    \entry{java}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{Oracle Java}
+      \verb{urlraw}
+      \verb https://www.oracle.com/java/
+      \endverb
+      \verb{url}
+      \verb https://www.oracle.com/java/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
