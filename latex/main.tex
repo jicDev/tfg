@@ -1,5 +1,5 @@
-\documentclass[a4paper,11pt,twocolumn]{article}
-\usepackage[utf8]{inputenc}
+\documentclass[journal]{IEEEtran}
+\IEEEoverridecommandlockouts
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
 \usepackage{subcaption}
@@ -11,122 +11,189 @@
 \usepackage{csquotes}
 \graphicspath{{./images/}}
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
-\renewcommand{\thesection}{\Roman{section}}
 \renewcommand{\thesubsection}{\Alph{subsection}}
-\newcommand{\sectionformat}{\centering}
 \title{Aplicativo para la detección de la enfermedad COVID-19}
 \author{Juan Ignacio Corbat, Eugenio Damián Pascuzzo}
+
 \begin{document}
 \maketitle
-\section{\sectionformat ABSTRACT}
-\paragraph{La detección temprana de la enfermedad COVID-19 en la población es un factor clave para combatir la pandemia iniciada a principios del año 2020. Este paper presenta un sistema para detectar dicha enfermedad a través de una aplicación apta para teléfonos inteligentes mediante el uso de inteligencia artificial.}
-\section{\sectionformat INTRODUCCIÓN}
-\paragraph{El coronavirus de tipo 2 causante del síndrome respiratorio agudo severo, abreviado SARS-CoV-2, es un tipo de coronavirus causante de la enfermedad por coronavirus de 2019, conocida como COVID-19. Se descubrió y se aisló por primera vez en Wuhan, China. Tiene un origen zoonótico, se transmitió de un huésped animal a uno humano\cite{covid-19-definición}.}
-\paragraph{Las pruebas de laboratorio para el diagnóstico del COVID-19 incluyen los métodos que detectan la presencia del propio virus y aquellos que detectan los anticuerpos producidos por el cuerpo humano en respuesta a la infección. Los principales son las pruebas moleculares, la prueba de antígenos y las pruebas de serología.}
-\paragraph{Debido a la complejidad y coste de las pruebas PCR, en los primeros meses de la pandemia casi ningún país dispuso de datos confiables sobre la prevalencia del virus en su población. Esta variabilidad afectó las tasas de mortalidad reportadas\cite{covid-19-overview}.}
-\paragraph{Se sabe que una de las principales defensas con las que cuentan los Estados para combatirla es la rápida detección de los pacientes asintomáticos. Para que sea efectivo, se necesitan utilizar mecanismos que sean económicos, masivos y fácilmente escalables.}
-\paragraph{Los médicos utilizan diariamente las señales de audio generadas por el cuerpo humano para el diagnóstico y seguimiento de enfermedades.}
-\paragraph{A través de trabajos de investigación, se comienza a migrar con mayor ímpetu a tecnologías digitales para los exámenes clínicos con el objetivo de lograr su automatización a largo plazo.}
-\paragraph{Estudios han probado que es posible generar un clasificador binario de aprendizaje automático simple que es capaz de segregar correctamente una persona asintomática COVID-19 de una sana basándose en registros de tos de los pacientes.}
-\paragraph{De esta manera, este trabajo busca ampliar el análisis automático de sonido en el diagnóstico de COVID-19, dando una metodología en la aplicación del análisis por inteligencia artificial en diagnósticos por análisis de sonido para esta y otras enfermedades actuales como así también enfermedades futuras que requieran una rápida respuesta colectiva.}
-\section{\sectionformat CASO DE ESTUDIO}
-\paragraph{Creación de una aplicación para dispositivos móviles que permita, a través de completar un cuestionario y un registro sonoro de tos, la ayuda en el diagnóstico de la enfermedad COVID-19.}
-\section{\sectionformat MARCO TEÓRICO}
+
+\begin{abstract}
+La detección temprana de la enfermedad COVID-19 en la población es un factor clave para combatir la pandemia iniciada a principios del año 2020. Este paper presenta un sistema para detectar dicha enfermedad a través de una aplicación apta para teléfonos inteligentes mediante el uso de inteligencia artificial.
+\end{abstract}
+
+\section{INTRODUCCIÓN}
+El coronavirus de tipo 2 causante del síndrome respiratorio agudo severo, abreviado SARS-CoV-2, es un tipo de coronavirus causante de la enfermedad por coronavirus de 2019, conocida como COVID-19. Se descubrió y se aisló por primera vez en Wuhan, China. Tiene un origen zoonótico, se transmitió de un huésped animal a uno humano\cite{covid-19-definición}.
+
+Las pruebas de laboratorio para el diagnóstico del COVID-19 incluyen los métodos que detectan la presencia del propio virus y aquellos que detectan los anticuerpos producidos por el cuerpo humano en respuesta a la infección. Los principales son las pruebas moleculares, la prueba de antígenos y las pruebas de serología.
+
+Debido a la complejidad y coste de las pruebas PCR, en los primeros meses de la pandemia casi ningún país dispuso de datos confiables sobre la prevalencia del virus en su población. Esta variabilidad afectó las tasas de mortalidad reportadas\cite{covid-19-overview}.
+
+Se sabe que una de las principales defensas con las que cuentan los Estados para combatirla es la rápida detección de los pacientes asintomáticos. Para que sea efectivo, se necesitan utilizar mecanismos que sean económicos, masivos y fácilmente escalables.
+
+Los médicos utilizan diariamente las señales de audio generadas por el cuerpo humano para el diagnóstico y seguimiento de enfermedades.
+
+A través de trabajos de investigación, se comienza a migrar con mayor ímpetu a tecnologías digitales para los exámenes clínicos con el objetivo de lograr su automatización a largo plazo.
+
+Estudios han probado que es posible generar un clasificador binario de aprendizaje automático simple que es capaz de segregar correctamente una persona asintomática COVID-19 de una sana basándose en registros de tos de los pacientes.
+
+De esta manera, este trabajo busca ampliar el análisis automático de sonido en el diagnóstico de COVID-19, dando una metodología en la aplicación del análisis por inteligencia artificial en diagnósticos por análisis de sonido para esta y otras enfermedades actuales como así también enfermedades futuras que requieran una rápida respuesta colectiva.
+
+\section{CASO DE ESTUDIO}
+Creación de una aplicación para dispositivos móviles que permita, a través de completar un cuestionario y un registro sonoro de tos, la ayuda en el diagnóstico de la enfermedad COVID-19.
+
+\section{MARCO TEÓRICO}
 \subsection{Trasfondo}
-\paragraph{La pandemia de gripe A (H1N1) de 2009-2010 fue una pandemia causada por la variante /09 del Influenzavirus A (subtipo H1N1). La enfermedad causada por esta nueva cepa viral es conocida como gripe porcina. El 30 de abril de 2009, la OMS decidió denominarla gripe A (H1N1).}
-\paragraph{El origen de la infección es una variante de la cepa H1N1, con material genético proveniente de una cepa aviaria, dos cepas porcinas y una humana que sufrió una mutación y dio un salto entre especies (o heterocontagio) de los cerdos a los humanos, para después permitir el contagio de persona a persona.}
-\paragraph{Los síntomas de este nuevo virus al lado de la influenza H1N1 en las personas son similares a los síntomas de la influenza o gripe estacional. Incluyen fiebre muy alta (38-40 ºC), tos seca recurrente, dolor de garganta, moqueo o secreción nasal, dolores en el cuerpo, dolor de cabeza, escalofríos, fatiga, dolor en los ojos, pérdida del apetito, problemas para respirar como falta de aliento. Una cantidad significativa de personas infectadas por este virus también informó tener vómito y diarrea.}
-\paragraph{Entre enero de 2009 y septiembre de 2010, la cantidad de muertes a nivel mundial asciende a 19.000\cite{h1n1-overview}.}
-\paragraph{El 11 de marzo de 2020, la Organización Mundial de la Salud declaró oficialmente la pandemia de la nueva enfermedad SARS-CoV-2 (COVID-19).}
-\paragraph{La enfermedad por coronavirus de 2019, más conocida como COVID-19, covid-19 o covid, e incorrectamente llamada neumonía por coronavirus, coronavirus o corona, es una enfermedad infecciosa causada por el SARS-CoV-2.}
-\paragraph{Produce síntomas que incluyen fiebre, tos, disnea (dificultad respiratoria), mialgia (dolor muscular) y fatiga. En casos graves se caracteriza por producir neumonía, síndrome de dificultad respiratoria aguda, sepsis y choque circulatorio. Choque séptico es la forma más común en estos casos, pero los otros tipos también pueden ocurrir.}
-\paragraph{Según la OMS, la infección es mortal entre el 0,5 \% y el 1 \% de los casos. No existe tratamiento específico; las medidas terapéuticas principales consisten en aliviar los síntomas y mantener las funciones vitales.}
-\paragraph{Al mes de Abril de 2022 la cantidad de muertes producidas por la enfermedad COVID-19 asciende a las 6.100.000 personas a nivel mundial\cite{hopkins-map}.}
+La pandemia de gripe A (H1N1) de 2009-2010 fue una pandemia causada por la variante /09 del Influenzavirus A (subtipo H1N1). La enfermedad causada por esta nueva cepa viral es conocida como gripe porcina. El 30 de abril de 2009, la OMS decidió denominarla gripe A (H1N1).
+
+El origen de la infección es una variante de la cepa H1N1, con material genético proveniente de una cepa aviaria, dos cepas porcinas y una humana que sufrió una mutación y dio un salto entre especies (o heterocontagio) de los cerdos a los humanos, para después permitir el contagio de persona a persona.
+
+Los síntomas de este nuevo virus al lado de la influenza H1N1 en las personas son similares a los síntomas de la influenza o gripe estacional. Incluyen fiebre muy alta (38-40 ºC), tos seca recurrente, dolor de garganta, moqueo o secreción nasal, dolores en el cuerpo, dolor de cabeza, escalofríos, fatiga, dolor en los ojos, pérdida del apetito, problemas para respirar como falta de aliento. Una cantidad significativa de personas infectadas por este virus también informó tener vómito y diarrea.
+
+Entre enero de 2009 y septiembre de 2010, la cantidad de muertes a nivel mundial asciende a 19.000\cite{h1n1-overview}.
+
+El 11 de marzo de 2020, la Organización Mundial de la Salud declaró oficialmente la pandemia de la nueva enfermedad SARS-CoV-2 (COVID-19).
+
+La enfermedad por coronavirus de 2019, más conocida como COVID-19, covid-19 o covid, e incorrectamente llamada neumonía por coronavirus, coronavirus o corona, es una enfermedad infecciosa causada por el SARS-CoV-2.
+
+Produce síntomas que incluyen fiebre, tos, disnea (dificultad respiratoria), mialgia (dolor muscular) y fatiga. En casos graves se caracteriza por producir neumonía, síndrome de dificultad respiratoria aguda, sepsis y choque circulatorio. Choque séptico es la forma más común en estos casos, pero los otros tipos también pueden ocurrir.
+
+Según la OMS, la infección es mortal entre el 0,5 \% y el 1 \% de los casos. No existe tratamiento específico; las medidas terapéuticas principales consisten en aliviar los síntomas y mantener las funciones vitales.
+
+Al mes de Abril de 2022 la cantidad de muertes producidas por la enfermedad COVID-19 asciende a las 6.100.000 personas a nivel mundial\cite{hopkins-map}.
+
 \subsection{Inteligencia artificial aplicada}
-\paragraph{La IA como herramienta: un marco para pensar la introducción de la Inteligencia Artificial en la provisión de servicios de salud.}
-\paragraph{Así como la IA está cambiando la forma en que producimos, consumimos, trabajamos y nos comunicamos, también trajo consigo nuevas opciones para los gobiernos. Su incorporación en distintos ámbitos supone múltiples formas: desde la posibilidad de automatizar tareas, redistribuir responsabilidades entre humanos y máquinas, hasta facilitar el desarrollo de varias funciones basadas en el uso de datos.}
-\paragraph{El sector de la salud es uno de los que más incorporó programas basados en inteligencia artificial, tanto desde el sector privado como el público. Inicialmente, su implementación se centró en el diagnóstico y detección de enfermedades. Un ejemplo de esto es el software DART, aplicado en Chile, que analiza imágenes oculares para el diagnóstico de retinopatía diabética. Según fuentes oficiales, esta herramienta permitiría triplicar la cantidad de estudios, al optimizar el uso de los recursos y volcar este ahorro hacia la adquisición de nuevos equipos y contratación de más personal médico y técnico, entre otras cosas. En línea con esto, otro caso es el del programa HeartFlow utilizado por la NHS en el Reino Unido para la creación modelos 3D del corazón y el flujo sanguíneo, permite detectar anomalías y proceder con el mejor tratamiento según el cuadro clínico.}
-\paragraph{En la actualidad, los algoritmos también están colaborando en la definición e implementación de tratamientos. Si bien esta modalidad no se encuentra tan extendida como para los diagnósticos, múltiples investigaciones en curso resaltan su potencial. A modo de ejemplo, la Unión Europea está financiando una investigación de tres años en conjunto con organizaciones públicas y privadas de distintos países, para desarrollar un sistema llamado “PEPPER”, cuyo objetivo es dotar a los enfermos de diabetes de un dispositivo que - a través de IA - graduará dosis de insulina necesarias con alta precisión.}
-\paragraph{Además, la IA también está siendo utilizada para colaborar en la toma de decisiones en materia de salud pública, es decir, en programas gubernamentales como podrían ser políticas preventivas o programas de vacunación. Este es el caso del hc1 Opioid Dashboard aplicado en Indiana - Estados Unidos, que utiliza técnicas de machine learning alimentada por resultados de laboratorio y bases de datos gubernamentales, con el fin de identificar niveles de uso de opioides a nivel barrial y enfocar las políticas preventivas en esos lugares.}
-\paragraph{Si bien el sector público ha tenido un rol importante en la promoción y sostén de estos proyectos, ya sea garantizando el financiamiento de dichos programas o adoptando el uso de algoritmos para brindar servicios, el sector privado ha jugado un rol fundamental, ya que es allí donde estos desarrollos se producen a gran velocidad.}
-\paragraph{En cuanto a sus efectos, distintos ejemplos resaltan las consecuencias positivas de aplicar la inteligencia artificial a los sistemas de salud. Las nuevas herramientas permitirían reemplazar viejos, lentos y costosos equipos y tratamientos, lo que a la larga racionaliza los sistemas de salud al volverlos más solventes y eficaces. Además, la inclusión de softwares inteligentes en las actividades médicas acelera la resolución de situaciones complejas, como la obstrucción de una arteria. Esto, a mayor escala, podría colaborar en la disminución de cuellos de botella existentes en los sistemas de salud públicos.}
-\paragraph{Sin embargo, no todas las voces celebran el desembarco de la inteligencia artificial en la salud, y otras incluso cuestionan su efectividad. Tal es el caso de Watson for Oncology de IBM, un sistema utilizado en hospitales de más de 5 países para colaborar en el diagnóstico de pacientes con cáncer y en la definición sobre su atención clínica. Si bien este sistema está en modo beta (es decir, recién se puso a prueba), ya hubo varias denuncias alegando que el algoritmo utilizado derivó en una serie de recomendaciones de tratamientos “inseguros e incorrectos”, despertando de este modo dudas por la falta de validación clínica y de investigación revisada entre pares para corroborar su efectividad. Sin marcos de responsabilidad significativos, así como estructuras regulatorias sólidas, este tipo de experimentación sin control deriva en riesgos potenciales altos en materia de salud.}
-\paragraph{Otras inquietudes refieren a la privacidad de los datos personales, una de las principales preocupaciones a la hora de regular a la IA. En concreto, y especialmente en un tema tan sensible como la salud, esto refiere a la importancia de contar con un consentimiento expreso e informado para el uso de estos datos y lo que distintos organismos puedan hacer con dicha información. Algunas estimaciones indican que, en Estados Unidos, solamente en el tercer trimestre de 2018, hubo 117 violaciones de datos de salud, derivando en la publicación de 4.4 millones de registros de pacientes\cite{inteligencia-artificial-en-salud}.}
-\paragraph{El presente trabajo busca ser un soporte complementario de calidad en el análisis de la enfermedad COVID-19 y no busca reemplazar el diagnóstico final de un profesional de la salud. Su objetivo es el de ser una herramienta más que agregue valor al juicio del profesional evaluador del caso.}
+La IA como herramienta: un marco para pensar la introducción de la Inteligencia Artificial en la provisión de servicios de salud.
+
+Así como la IA está cambiando la forma en que producimos, consumimos, trabajamos y nos comunicamos, también trajo consigo nuevas opciones para los gobiernos. Su incorporación en distintos ámbitos supone múltiples formas: desde la posibilidad de automatizar tareas, redistribuir responsabilidades entre humanos y máquinas, hasta facilitar el desarrollo de varias funciones basadas en el uso de datos.
+
+El sector de la salud es uno de los que más incorporó programas basados en inteligencia artificial, tanto desde el sector privado como el público. Inicialmente, su implementación se centró en el diagnóstico y detección de enfermedades. Un ejemplo de esto es el software DART, aplicado en Chile, que analiza imágenes oculares para el diagnóstico de retinopatía diabética. Según fuentes oficiales, esta herramienta permitiría triplicar la cantidad de estudios, al optimizar el uso de los recursos y volcar este ahorro hacia la adquisición de nuevos equipos y contratación de más personal médico y técnico, entre otras cosas. En línea con esto, otro caso es el del programa HeartFlow utilizado por la NHS en el Reino Unido para la creación modelos 3D del corazón y el flujo sanguíneo, permite detectar anomalías y proceder con el mejor tratamiento según el cuadro clínico.
+
+En la actualidad, los algoritmos también están colaborando en la definición e implementación de tratamientos. Si bien esta modalidad no se encuentra tan extendida como para los diagnósticos, múltiples investigaciones en curso resaltan su potencial. A modo de ejemplo, la Unión Europea está financiando una investigación de tres años en conjunto con organizaciones públicas y privadas de distintos países, para desarrollar un sistema llamado “PEPPER”, cuyo objetivo es dotar a los enfermos de diabetes de un dispositivo que - a través de IA - graduará dosis de insulina necesarias con alta precisión.
+
+Además, la IA también está siendo utilizada para colaborar en la toma de decisiones en materia de salud pública, es decir, en programas gubernamentales como podrían ser políticas preventivas o programas de vacunación. Este es el caso del hc1 Opioid Dashboard aplicado en Indiana - Estados Unidos, que utiliza técnicas de machine learning alimentada por resultados de laboratorio y bases de datos gubernamentales, con el fin de identificar niveles de uso de opioides a nivel barrial y enfocar las políticas preventivas en esos lugares.
+
+Si bien el sector público ha tenido un rol importante en la promoción y sostén de estos proyectos, ya sea garantizando el financiamiento de dichos programas o adoptando el uso de algoritmos para brindar servicios, el sector privado ha jugado un rol fundamental, ya que es allí donde estos desarrollos se producen a gran velocidad.
+
+En cuanto a sus efectos, distintos ejemplos resaltan las consecuencias positivas de aplicar la inteligencia artificial a los sistemas de salud. Las nuevas herramientas permitirían reemplazar viejos, lentos y costosos equipos y tratamientos, lo que a la larga racionaliza los sistemas de salud al volverlos más solventes y eficaces. Además, la inclusión de softwares inteligentes en las actividades médicas acelera la resolución de situaciones complejas, como la obstrucción de una arteria. Esto, a mayor escala, podría colaborar en la disminución de cuellos de botella existentes en los sistemas de salud públicos.
+
+Sin embargo, no todas las voces celebran el desembarco de la inteligencia artificial en la salud, y otras incluso cuestionan su efectividad. Tal es el caso de Watson for Oncology de IBM, un sistema utilizado en hospitales de más de 5 países para colaborar en el diagnóstico de pacientes con cáncer y en la definición sobre su atención clínica. Si bien este sistema está en modo beta (es decir, recién se puso a prueba), ya hubo varias denuncias alegando que el algoritmo utilizado derivó en una serie de recomendaciones de tratamientos “inseguros e incorrectos”, despertando de este modo dudas por la falta de validación clínica y de investigación revisada entre pares para corroborar su efectividad. Sin marcos de responsabilidad significativos, así como estructuras regulatorias sólidas, este tipo de experimentación sin control deriva en riesgos potenciales altos en materia de salud.
+
+Otras inquietudes refieren a la privacidad de los datos personales, una de las principales preocupaciones a la hora de regular a la IA. En concreto, y especialmente en un tema tan sensible como la salud, esto refiere a la importancia de contar con un consentimiento expreso e informado para el uso de estos datos y lo que distintos organismos puedan hacer con dicha información. Algunas estimaciones indican que, en Estados Unidos, solamente en el tercer trimestre de 2018, hubo 117 violaciones de datos de salud, derivando en la publicación de 4.4 millones de registros de pacientes\cite{inteligencia-artificial-en-salud}.
+
+El presente trabajo busca ser un soporte complementario de calidad en el análisis de la enfermedad COVID-19 y no busca reemplazar el diagnóstico final de un profesional de la salud. Su objetivo es el de ser una herramienta más que agregue valor al juicio del profesional evaluador del caso.
+
 \subsection{Uso de datos personales y Habeas Data}
-\paragraph{Con el objetivo de evitar incurrir en infracciones o cuestiones que competen al derecho de la normativa Argentina e Internacional, el software deberá indicar explícitamente en un contrato de usuario indicando específicamente que datos del usuario que utilice la aplicación se registrarán, que se conservará su anonimato en todo momento y que los datos que se persistirán en una bases de datos serán anónimos, con fines estadísticos y de aprendizaje automático para la inteligencia artificial y que no se guardará referencia de estos con el usuario.}
-\paragraph{En la jurisprudencia argentina contamos con la acción de hábeas data que consta de una modalidad de amparo que permite a toda persona interesada acceder al conocimiento de los datos que consten en registros o bancos de datos públicos o privados destinados a proveer informes, y a exigir su supresión, rectificación, confidencialidad o actualización, en caso de falsedad o discriminación. Esta información debe referirse a cuestiones relacionadas con la intimidad y no puede ser utilizada por terceros sin el derecho reconocido a hacerlo\cite{habeas-data}.}
+Con el objetivo de evitar incurrir en infracciones o cuestiones que competen al derecho de la normativa Argentina e Internacional, el software deberá indicar explícitamente en un contrato de usuario indicando específicamente que datos del usuario que utilice la aplicación se registrarán, que se conservará su anonimato en todo momento y que los datos que se persistirán en una bases de datos serán anónimos, con fines estadísticos y de aprendizaje automático para la inteligencia artificial y que no se guardará referencia de estos con el usuario.
+
+En la jurisprudencia argentina contamos con la acción de hábeas data que consta de una modalidad de amparo que permite a toda persona interesada acceder al conocimiento de los datos que consten en registros o bancos de datos públicos o privados destinados a proveer informes, y a exigir su supresión, rectificación, confidencialidad o actualización, en caso de falsedad o discriminación. Esta información debe referirse a cuestiones relacionadas con la intimidad y no puede ser utilizada por terceros sin el derecho reconocido a hacerlo\cite{habeas-data}.
+
 \subsection{Recolección de Datos}
-\paragraph{Para la recolección de datos, se utilizará un menú en la aplicación donde el usuario será guiado a través de una serie de sencillos pasos con la instrucción de cómo proceder a la vez que se le hará preguntas de su estado en general. Ya que posiblemente sea candidato a tener algún tipo de enfermedad respiratoria, se le mostrará formas seguras de hablar y toser sin poner en riesgo a su entorno, ni a sí mismo\cite{tp}.}
-\paragraph{Existe la posibilidad de que se generen muestras falsas, es decir, ruidos que no sean los solicitados por el sistema. Para ello, se puede crear un algoritmo de clasificación entrenado para detectar este tipo de muestras, excluyéndolas del análisis.}
-\paragraph{Trabajos de investigación cuya hipótesis se basa en el análisis de muestras de audio desarrollan su estudio utilizando frameworks de aumento de gradiente extremo (eXtreme Gradient Boosting, XGBoost). Es una técnica de machine learning por regresión que permite crear un modelo de predicción por etapas\cite{tp}.}
-\paragraph{Usualmente, las muestras de audio se representan a lo largo de un periodo de tiempo en segundos y mostrando en el eje-y la amplitud de la onda, siendo esta una función de cambio en la presión alrededor del micrófono que capta el sonido.}
+Para la recolección de datos, se utilizará un menú en la aplicación donde el usuario será guiado a través de una serie de sencillos pasos con la instrucción de cómo proceder a la vez que se le hará preguntas de su estado en general. Ya que posiblemente sea candidato a tener algún tipo de enfermedad respiratoria, se le mostrará formas seguras de hablar y toser sin poner en riesgo a su entorno, ni a sí mismo\cite{tp}.
+
+Existe la posibilidad de que se generen muestras falsas, es decir, ruidos que no sean los solicitados por el sistema. Para ello, se puede crear un algoritmo de clasificación entrenado para detectar este tipo de muestras, excluyéndolas del análisis.
+
+Trabajos de investigación cuya hipótesis se basa en el análisis de muestras de audio desarrollan su estudio utilizando frameworks de aumento de gradiente extremo (eXtreme Gradient Boosting, XGBoost). Es una técnica de machine learning por regresión que permite crear un modelo de predicción por etapas\cite{tp}.
+
+Usualmente, las muestras de audio se representan a lo largo de un periodo de tiempo en segundos y mostrando en el eje-y la amplitud de la onda, siendo esta una función de cambio en la presión alrededor del micrófono que capta el sonido.
 \begin{figure}[H]
 \begin{subfigure}[b]{1\columnwidth}
 \includegraphics[width=\linewidth, keepaspectratio]{amplitude_pneumonia_asthma}
 \end{subfigure}
 \begin{subfigure}[b]{1\columnwidth}
 \includegraphics[width=\linewidth]{amplitude_bronchitis_bronchiolitis}
-\caption{Amplitud de onda de toses en un mismo período de tiempo según enfermedad.}
 \end{subfigure}
+\caption{Amplitud de onda de toses en un mismo período de tiempo según enfermedad.}
 \end{figure}
-\paragraph{También se puede representar a través de un espectrograma, que es la representación visual del espectro de frecuencias de una señal que varía con el tiempo\cite{espectrograma}.}
+
+También se puede representar a través de un espectrograma, que es la representación visual del espectro de frecuencias de una señal que varía con el tiempo\cite{espectrograma}.
 \begin{figure}[H]
 \begin{subfigure}[b]{1\columnwidth}
 \includegraphics[width=\textwidth]{spectogram_pneumonia_asthma}
 \end{subfigure}
 \begin{subfigure}[b]{1\columnwidth}
 \includegraphics[width=\textwidth]{spectogram_bronchitis_bronchiolitis}
-\caption{Espectrogramas. Representación visual del espectro de frecuencias en un mismo período de tiempo según la enfermedad.}
 \end{subfigure}
+\caption{Espectrogramas. Representación visual del espectro de frecuencias en un mismo período de tiempo según la enfermedad.}
 \end{figure}
+
 \subsection{Demografía}
-\paragraph{Se deberá analizar la localización geográfica proveniente de la muestra para compararla con estadísticas públicas y propias de la enfermedad. La misma servirá para acotar o descartar posibles diagnósticos según la procedencia y el comportamiento de la población para el caso de análisis.}
-\paragraph{Para conseguir un nivel de fidelidad alto en el análisis de la información, es primordial obtener una amplia cantidad de muestras heterogéneas con la cual desarrollar la base de datos\cite{tp}.}
-\paragraph{Para el entrenamiento de la inteligencia artificial contamos con la base de datos pública provista por el Gobierno de la Ciudad de Buenos Aires la cual es de acceso público y que se pone a disposición para trabajos como el presente.}
+Se deberá analizar la localización geográfica proveniente de la muestra para compararla con estadísticas públicas y propias de la enfermedad. La misma servirá para acotar o descartar posibles diagnósticos según la procedencia y el comportamiento de la población para el caso de análisis.
+
+Para conseguir un nivel de fidelidad alto en el análisis de la información, es primordial obtener una amplia cantidad de muestras heterogéneas con la cual desarrollar la base de datos\cite{tp}.
+
+Para el entrenamiento de la inteligencia artificial contamos con la base de datos pública provista por el Gobierno de la Ciudad de Buenos Aires la cual es de acceso público y que se pone a disposición para trabajos como el presente.
+
 \subsection{Estimación de la calidad del sonido}
-\paragraph{Probablemente, cada usuario utilice un dispositivo diferente para grabar los audios de su tos y la voz. De la misma forma se tiene que considerar el sonido secundario como posible factor de interferencia (ruido) que puede presentarse al subir el archivo de audio ya que no todas las grabaciones estarán perfectamente aisladas.}
-\paragraph{Para reducir el mismo se deberá contemplar un pre procesamiento de las muestras con el objetivo de su reducción sin afectar las partes de interés para su análisis\cite{tp}.}
+Probablemente, cada usuario utilice un dispositivo diferente para grabar los audios de su tos y la voz. De la misma forma se tiene que considerar el sonido secundario como posible factor de interferencia (ruido) que puede presentarse al subir el archivo de audio ya que no todas las grabaciones estarán perfectamente aisladas.
+
+Para reducir el mismo se deberá contemplar un pre procesamiento de las muestras con el objetivo de su reducción sin afectar las partes de interés para su análisis\cite{tp}.
+
 \subsection{Clasificación del Sonido}
-\paragraph{Es importante tener una clasificación para los distintos tipos de voces y tos. La primera se puede agrupar los audios según el rango vocal, tesitura, puntos de transición vocal; mientras que la segunda puede discriminarse según la humedad, la duración, la frecuencia, la secades\cite{tp}.}
+Es importante tener una clasificación para los distintos tipos de voces y tos. La primera se puede agrupar los audios según el rango vocal, tesitura, puntos de transición vocal; mientras que la segunda puede discriminarse según la humedad, la duración, la frecuencia, la secades\cite{tp}.
+
 \subsection{Procesamiento de datos}
 \begin{figure}[H]
 \begin{subfigure}[b]{1\columnwidth}
 \includegraphics[width=\textwidth]{audiowave_to_classifier}
-\caption{Pasos para el procesamiento de audios.}
 \end{subfigure}
+\caption{Pasos para el procesamiento de audios.}
 \end{figure}
-\paragraph{Para realizar el preprocesamiento del conjunto de datos, es necesario realizar una serie de pasos para extraer la información que le permita predecir la clase de muestra obtenida en un contexto de machine learning. Dicho proceso, buscará encontrar elementos distinguibles entre cada muestra.}
-\paragraph{Por lo general, se recomienda extraer las ondas de audio generando Coeﬁcientes Cepstrales en las Frecuencias de Mel o Mel Frequency Cepstral Coeﬃcients. Se calculan al separar la señal en pequeños tramos, luego a cada uno se le aplica la transformada de Fourier discreta para obtener la potencia espectral de la señal. Al mismo se le aplica el banco de filtros correspondientes a la Escala Mel y se le suma las energías en cada uno\cite{fourier}.}
-\paragraph{Por último, toma el logaritmo de todas las energías de cada frecuencia mel y se le aplica la transformada de coseno discreta.}
-\paragraph{Existen frameworks como Librosa para ayudar con este tipo de trabajo\cite{librosa}.}
+Para realizar el preprocesamiento del conjunto de datos, es necesario realizar una serie de pasos para extraer la información que le permita predecir la clase de muestra obtenida en un contexto de machine learning. Dicho proceso, buscará encontrar elementos distinguibles entre cada muestra.
+
+Por lo general, se recomienda extraer las ondas de audio generando Coeﬁcientes Cepstrales en las Frecuencias de Mel o Mel Frequency Cepstral Coeﬃcients. Se calculan al separar la señal en pequeños tramos, luego a cada uno se le aplica la transformada de Fourier discreta para obtener la potencia espectral de la señal. Al mismo se le aplica el banco de filtros correspondientes a la Escala Mel y se le suma las energías en cada uno\cite{fourier}.
+
+Por último, toma el logaritmo de todas las energías de cada frecuencia mel y se le aplica la transformada de coseno discreta.
+
+Existen frameworks como Librosa para ayudar con este tipo de trabajo\cite{librosa}.
+
 \subsection{Creación del Modelo}
-\paragraph{Una vez obtenidos los espectrogramas, se puede utilizar una red neuronal convolucional de clasificación para procesar las imágenes. Frameworks como PyTorch trabajan con los bloques convolucionales que permiten generar los mapas de características para clasificar las muestras según las categorías predichas\cite{tp}.}
+Una vez obtenidos los espectrogramas, se puede utilizar una red neuronal convolucional de clasificación para procesar las imágenes. Frameworks como PyTorch trabajan con los bloques convolucionales que permiten generar los mapas de características para clasificar las muestras según las categorías predichas\cite{tp}.
+
 \subsection{Aprendizaje}
-\paragraph{Se definen las funciones para el optimizador, la pérdida y el programador para variar dinámicamente la tasa de aprendizaje a medida que avanza el entrenamiento.}
-\paragraph{Se entrena el modelo en varios ciclos, procesando un lote de datos en cada iteración y se realiza un seguimiento de una métrica de precisión simple que mide el porcentaje de predicciones correctas\cite{tp}.}
+Se definen las funciones para el optimizador, la pérdida y el programador para variar dinámicamente la tasa de aprendizaje a medida que avanza el entrenamiento.
+
+
+Se entrena el modelo en varios ciclos, procesando un lote de datos en cada iteración y se realiza un seguimiento de una métrica de precisión simple que mide el porcentaje de predicciones correctas\cite{tp}.
+
 \subsection{Inferencia}
-\paragraph{Se ejecuta un ciclo de inferencia teniendo cuidado de deshabilitar las actualizaciones de gradiente. El pase hacia adelante se ejecuta con el modelo para obtener predicciones, pero no necesitamos propagar hacia atrás ni ejecutar el optimizador\cite{tp}.}
-\section{\sectionformat DESARROLLO}
+Se ejecuta un ciclo de inferencia teniendo cuidado de deshabilitar las actualizaciones de gradiente. El pase hacia adelante se ejecuta con el modelo para obtener predicciones, pero no necesitamos propagar hacia atrás ni ejecutar el optimizador\cite{tp}.
+
+\section{DESARROLLO}
 \subsection{Requerimientos funcionales}
-\paragraph{Se desarrollará una aplicación para dispositivos móviles que permitirá a sus usuarios registrar una muestra de sonido para evaluar la posibilidad de que el usuario posea la enfermedad COVID-19.}
-\paragraph{El sistema requerirá que el usuario se registre para su utilización.}
-\paragraph{El sistema registrará un formulario con datos del usuario junto a la muestra de audio.}
-\paragraph{El sistema requerirá al sistema operativo del dispositivo los datos correspondientes a la geolocalización al momento de grabar la muestra.}
-\paragraph{El sistema registrará los datos provistos por el usuario.}
-\paragraph{El sistema persistirá en un storage la muestra de sonido provista por el usuario.}
-\paragraph{El sistema procesará la muestra de audio para generar la imagen correspondiente a la transformada de Fourier la cual será persistida en un storage.}
-\paragraph{El sistema procesará la imagen, registrará el resultado y se lo dará a conocer al usuario.}
-\paragraph{El sistema permitirá consultar un histórico de todos los resultados de los muestreos realizados por el usuario.}
+Se desarrollará una aplicación para dispositivos móviles que permitirá a sus usuarios registrar una muestra de sonido para evaluar la posibilidad de que el usuario posea la enfermedad COVID-19.
+
+El sistema requerirá que el usuario se registre para su utilización.
+
+El sistema registrará un formulario con datos del usuario junto a la muestra de audio.
+
+El sistema requerirá al sistema operativo del dispositivo los datos correspondientes a la geolocalización al momento de grabar la muestra.
+
+El sistema registrará los datos provistos por el usuario.
+
+El sistema persistirá en un storage la muestra de sonido provista por el usuario.
+
+El sistema procesará la muestra de audio para generar la imagen correspondiente a la transformada de Fourier la cual será persistida en un storage.
+
+El sistema procesará la imagen, registrará el resultado y se lo dará a conocer al usuario.
+
+El sistema permitirá consultar un histórico de todos los resultados de los muestreos realizados por el usuario.
+
 \subsection{Requerimientos no funcionales}
-\paragraph{La aplicación se dividirá en dos partes. Un frontend que será la interfaz con la que el usuario va a interactuar y un backend que se ocupará de procesar las peticiones recibidas por el frontend.}
-\paragraph{La aplicación de front será una aplicación móvil híbrida lo que permitirá tener una única aplicación para los distintos sistemas operativos de los diferentes dispositivos móviles (portabilidad).}
-\paragraph{El frontend será desarrollado con Reac Native\cite{react}.}
-\paragraph{El backend estará compuesto por dos servicios orquestados a través de una arquitectura orientada a microservicios.}
-\paragraph{Un servicio backend desarrollado con Java que cumplirá la función de API. Este servicio tendrá las responsabilidades de procesar los request provenientes del frontend, securización de endpoints, interacción con la API de IA, persistencia de datos en base de datos y persistencia de muestras en storage\cite{java}.}
-\paragraph{Un servicio IA que será un API construida con Python la cual procesará la imagen de la muestra y devolverá el resultado del análisis.}
+La aplicación se dividirá en dos partes. Un frontend que será la interfaz con la que el usuario va a interactuar y un backend que se ocupará de procesar las peticiones recibidas por el frontend.
+
+La aplicación de front será una aplicación móvil híbrida lo que permitirá tener una única aplicación para los distintos sistemas operativos de los diferentes dispositivos móviles (portabilidad).
+
+El frontend será desarrollado con Reac Native\cite{react}.
+
+El backend estará compuesto por dos servicios orquestados a través de una arquitectura orientada a microservicios.
+
+Un servicio backend desarrollado con Java que cumplirá la función de API. Este servicio tendrá las responsabilidades de procesar los request provenientes del frontend, securización de endpoints, interacción con la API de IA, persistencia de datos en base de datos y persistencia de muestras en storage\cite{java}.
+
+Un servicio IA que será un API construida con Python la cual procesará la imagen de la muestra y devolverá el resultado del análisis.
+
 \subsection{Diseño de la Solución}
-\paragraph{Diseño realizado en: \href{https://www.figma.com/proto/M8RWGFdiOidZSZONJyYMPn/TFG?node-id=2\%3A3&starting-point-node-id=2\%3A3}{Figma.}}
+Diseño realizado en: \href{https://www.figma.com/proto/M8RWGFdiOidZSZONJyYMPn/TFG?node-id=2\%3A3&starting-point-node-id=2\%3A3}{Figma.}
 \begin{figure}[H]
 \centering
 \includegraphics[height=3cm]{figma01}
@@ -157,31 +224,49 @@
 \includegraphics[height=3cm]{figma06}
 \caption{Historial.}
 \end{figure}
+
 \subsection{Arquitectura del Producto}
 \begin{figure}[H]
 \begin{subfigure}[b]{1\columnwidth}
 \includegraphics[width=\textwidth]{diagrama_de_secuencia}
-\caption{Diagrama de secuencia del dispositivo.}
 \end{subfigure}
+\caption{Diagrama de secuencia del dispositivo.}
 \end{figure}
+
 \section{CONCLUSIÓN}
-\paragraph{Desde un principio supimos que la dificultad más grande que íbamos a tener al llevar a cabo este trabajo iba a ser el cómo procesar muestras de toses en audio para entrenar una inteligencia artificial.}
-\paragraph{El primer desafío fue encontrar una base de datos de toses que nos permita ser utilizada como fuente de entrada para el entrenamiento de nuestra IA.}
-\paragraph{Nos encontramos con que el Gobierno de la Ciudad Autónoma de Buenos Aires creó una inteligencia artificial que procesa toses llamada IATos.}
-\paragraph{Este sistema se entrenó con toses enviadas por WhatsApp a través del Bot Boti utilizado por el organismo para brindar información de manera automática a sus ciudadanos.}
-\paragraph{La base de datos que se utilizó para el entrenamiento de IATos es pública y de libre utilización, la cual puede ser descargada con una base de datos donde indica la positividad de cada una de las muestras.}
-\paragraph{Ya teníamos nuestro muestreo para poder entrenar a nuestra IA pero aún no sabíamos cómo íbamos a convertir audio digital en una imagen para que pueda ser tomada como entrada en el proceso de entrenamiento de una red neuronal convolucional (CNN de su sigla en inglés).}
-\paragraph{Basándonos en el trabajo de Juan Ignacio Corbat para la materia Inteligencia Artificial investigamos las posibilidades de la biblioteca de programación para Python Librosa.}
-\paragraph{Encontramos un trabajo muy interesante en donde aplicaron Librosa para el procesamiento de toses.}
-\paragraph{En este trabajo aplicaron esta biblioteca para generar una Transformada de Fourier a las muestras de tos y de esta manera generar una imagen útil para entrenar la IA.}
-\paragraph{Luego de investigar técnicamente como aplicar el algoritmo para realizar la transformación, nos encontramos con un inconveniente en el formato de audio ogg de las muestras que contábamos para entrenar nuestra IA.}
-\paragraph{Si bien Librosa permite el formato de entrada ogg, las muestras contaban con metadata que no era aceptada por la biblioteca evitando el procesamiento.}
-\paragraph{Buscamos soluciones para este error y encontramos que era frecuente en el procesamiento de archivos de audio generados por aplicaciones de mensajería como WhatsApp o Telegram. La solución era convertir el formato ogg por wav.}
-\paragraph{Para realizar esta conversión utilizamos la aplicación de creación, conversión y transmisión de audio y video FFmpeg.}
-\paragraph{Con los audios en formato wav pudimos generar satisfactoriamente las imágenes con la Transformada de Fourier correspondiente.}
+Desde un principio supimos que la dificultad más grande que íbamos a tener al llevar a cabo este trabajo iba a ser el cómo procesar muestras de toses en audio para entrenar una inteligencia artificial.
+
+El primer desafío fue encontrar una base de datos de toses que nos permita ser utilizada como fuente de entrada para el entrenamiento de nuestra IA.
+
+Nos encontramos con que el Gobierno de la Ciudad Autónoma de Buenos Aires creó una inteligencia artificial que procesa toses llamada IATos.
+
+Este sistema se entrenó con toses enviadas por WhatsApp a través del Bot Boti utilizado por el organismo para brindar información de manera automática a sus ciudadanos.
+
+La base de datos que se utilizó para el entrenamiento de IATos es pública y de libre utilización, la cual puede ser descargada con una base de datos donde indica la positividad de cada una de las muestras.
+
+Ya teníamos nuestro muestreo para poder entrenar a nuestra IA pero aún no sabíamos cómo íbamos a convertir audio digital en una imagen para que pueda ser tomada como entrada en el proceso de entrenamiento de una red neuronal convolucional (CNN de su sigla en inglés).
+
+Basándonos en el trabajo de Juan Ignacio Corbat para la materia Inteligencia Artificial investigamos las posibilidades de la biblioteca de programación para Python Librosa.
+
+Encontramos un trabajo muy interesante en donde aplicaron Librosa para el procesamiento de toses.
+
+{En este trabajo aplicaron esta biblioteca para generar una Transformada de Fourier a las muestras de tos y de esta manera generar una imagen útil para entrenar la IA.}
+
+Luego de investigar técnicamente como aplicar el algoritmo para realizar la transformación, nos encontramos con un inconveniente en el formato de audio ogg de las muestras que contábamos para entrenar nuestra IA.
+
+Si bien Librosa permite el formato de entrada ogg, las muestras contaban con metadata que no era aceptada por la biblioteca evitando el procesamiento.
+
+Buscamos soluciones para este error y encontramos que era frecuente en el procesamiento de archivos de audio generados por aplicaciones de mensajería como WhatsApp o Telegram. La solución era convertir el formato ogg por wav.
+
+Para realizar esta conversión utilizamos la aplicación de creación, conversión y transmisión de audio y video FFmpeg.
+
+Con los audios en formato wav pudimos generar satisfactoriamente las imágenes con la Transformada de Fourier correspondiente.
+
 \section{BIBLIOGRAFÍA}
 \printbibliography[heading=none]
+
 \section{SOBRE LOS AUTORES}
-\paragraph{Juan Ignacio Corbat es estudiante de la carrera Licenciatura en Informática en la Universidad de Palermo. Hace 4 años que trabaja en la industria de desarrollo de software, particularmente como Game Developer en el área de videojuegos. Disfruta asumir nuevos retos que permitan mejorar su conocimiento y aumentar su experiencia.}
-\paragraph{Eugenio Damián Pascuzzo es estudiante de la carrera Licenciatura en Informática en la Universidad de Palermo. Cuenta con más de 15 años de experiencia en la industria del Software. Se ha desempeñado como Ingeniero de Software y Líder Técnico entre otros cargos. Le apasiona el Desarrollo de Software y sus desafíos. Le gusta entender a las organizaciones, cuáles son sus procesos y cómo las tecnologías de la información se involucran en su funcionamiento.}
+Juan Ignacio Corbat es estudiante de la carrera Licenciatura en Informática en la Universidad de Palermo. Hace 4 años que trabaja en la industria de desarrollo de software, particularmente como Game Developer en el área de videojuegos. Disfruta asumir nuevos retos que permitan mejorar su conocimiento y aumentar su experiencia.
+
+Eugenio Damián Pascuzzo es estudiante de la carrera Licenciatura en Informática en la Universidad de Palermo. Cuenta con más de 15 años de experiencia en la industria del Software. Se ha desempeñado como Ingeniero de Software y Líder Técnico entre otros cargos. Le apasiona el Desarrollo de Software y sus desafíos. Le gusta entender a las organizaciones, cuáles son sus procesos y cómo las tecnologías de la información se involucran en su funcionamiento.
 \end{document}
